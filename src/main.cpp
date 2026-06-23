@@ -15,7 +15,7 @@ int main(int argc, char** argv) {
     monitor::System sys;
     auto root = ftxui::Renderer([&] {
         return ftxui::vbox({
-            ftxui::text("CPU: " + std::to_string(sys.cpu.GetUsage())),
+            ftxui::text("CPU: " + sys.cpu.GetUsage()),
             ftxui::text("RAM: " + std::to_string(sys.ram.GetUsage())),
             ftxui::text("Press Ctrl+C to exit")
         });

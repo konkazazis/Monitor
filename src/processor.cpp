@@ -1,2 +1,10 @@
 #include "monitor/processor.h"
-namespace monitor { float Processor::GetUsage() { return 0.0f; } }
+#include "monitor/parser.h"
+
+
+namespace monitor { 
+    std::string Processor::GetUsage() { 
+        std::string reading = readFile("/proc/stat");
+        return reading; 
+    }
+}
