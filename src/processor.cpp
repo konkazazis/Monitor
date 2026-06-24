@@ -4,7 +4,7 @@
 
 namespace monitor { 
     std::string Processor::GetUsage() { 
-        std::string reading = readFile("/proc/stat");
-        return reading; 
+        std::string firstLine = readFirstLine("/proc/stat");
+        return firstLine; 
     }
 }

@@ -4,7 +4,7 @@
 #include <string>
 
 namespace monitor {
-    std::string readFile(const std::string& path);
+    std::string readFirstLine(const std::string& path);
 }
 
 #endif   
